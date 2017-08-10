@@ -1,0 +1,16 @@
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartTest.deps.json
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartTest.runtimeconfig.json
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartTest.runtimeconfig.dev.json
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartTest.dll
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartTest.pdb
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\obj\Debug\netcoreapp1.1\ShoppingCartTest.csprojResolveAssemblyReference.cache
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\obj\Debug\netcoreapp1.1\ShoppingCartTest.AssemblyInfo.cs
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\obj\Debug\netcoreapp1.1\ShoppingCartTest.dll
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\obj\Debug\netcoreapp1.1\ShoppingCartTest.pdb
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartApi.dll
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartCore.dll
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartApi.pdb
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartTest\bin\Debug\netcoreapp1.1\ShoppingCartCore.pdb
