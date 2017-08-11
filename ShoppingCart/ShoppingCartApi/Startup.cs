@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ShoppingCartCore.Infra;
 
 namespace ShoppingCartModelApi
 {
@@ -28,6 +30,8 @@ namespace ShoppingCartModelApi
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            var connection = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<BaseContext>(opts => opts.UseSqlServer(connection, s=>s.MigrationsAssembly("ShoppingCartCore")));
             services.AddMvc();
         }
 

@@ -8,7 +8,7 @@ namespace ShoppingCartCore.Infra
 {
     public class SaleMapping
     {
-        public SaleMapping(EntityTypeBuilder<SaleModel> builder)
+        public SaleMapping(EntityTypeBuilder<Sale> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
@@ -16,7 +16,7 @@ namespace ShoppingCartCore.Infra
             builder.Property(x => x.PaymentId).IsRequired();
             builder.Property(x => x.DtSale).IsRequired();
             builder.Property(x => x.Total).IsRequired();
-            builder.HasOne(x => x.cart).WithOne(x => x.sale).HasForeignKey<SaleModel>(x => x.CartId);
+            builder.HasOne(x => x.cart).WithOne(x => x.sale).HasForeignKey<Sale>(x => x.CartId);
             builder.HasOne(x => x.payment).WithMany(x => x.sales).HasForeignKey(x => x.PaymentId);
         }
     }

@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ShoppingCartCore.Models
 {
-    public class CategoryModel : BaseEntity
+    public class Category : BaseEntity
     {
         public string Name { get; set; }
 
-        public List<ProductModel> products { get; set; }
+        public List<Product> products { get; set; }
     }
 }

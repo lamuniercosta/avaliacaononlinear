@@ -16,12 +16,12 @@ namespace ShoppingCartCore.Infra
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            new CategoryMapping(modelBuilder.Entity<CategoryModel>());
-            new PaymentMapping(modelBuilder.Entity<PaymentModel>());
-            new ProductMapping(modelBuilder.Entity<ProductModel>());
-            new CartMapping(modelBuilder.Entity<CartModel>());
-            new CartItemMapping(modelBuilder.Entity<CartItemModel>());
-            new SaleMapping(modelBuilder.Entity<SaleModel>());
+            new CategoryMapping(modelBuilder.Entity<Category>());
+            new PaymentMapping(modelBuilder.Entity<Payment>());
+            new ProductMapping(modelBuilder.Entity<Product>());
+            new CartMapping(modelBuilder.Entity<Cart>());
+            new CartItemMapping(modelBuilder.Entity<CartItem>());
+            new SaleMapping(modelBuilder.Entity<Sale>());
         }
 
         

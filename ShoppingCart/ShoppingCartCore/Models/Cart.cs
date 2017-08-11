@@ -6,11 +6,11 @@ using System.Text;
 
 namespace ShoppingCartCore.Models
 {
-    public class CartModel : BaseEntity
+    public class Cart : BaseEntity
     {
         public int SaleId { get; set; }
 
-        public SaleModel sale { get; set; }
-        public List<CartItemModel> cartItems { get; set; }
+        public Sale sale { get; set; }
+        public List<CartItem> cartItems { get; set; }
     }
 }

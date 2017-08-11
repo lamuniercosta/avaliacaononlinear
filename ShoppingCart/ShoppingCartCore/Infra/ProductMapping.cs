@@ -8,7 +8,7 @@ namespace ShoppingCartCore.Infra
 {
     public class ProductMapping
     {
-        public ProductMapping(EntityTypeBuilder<ProductModel> builder)
+        public ProductMapping(EntityTypeBuilder<Product> builder)
         {
 
             builder.HasKey(x => x.Id);

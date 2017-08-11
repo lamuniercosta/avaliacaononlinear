@@ -8,7 +8,7 @@ namespace ShoppingCartCore.Infra
 {
     public class PaymentMapping
     {
-        public PaymentMapping(EntityTypeBuilder<PaymentModel> builder)
+        public PaymentMapping(EntityTypeBuilder<Payment> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();

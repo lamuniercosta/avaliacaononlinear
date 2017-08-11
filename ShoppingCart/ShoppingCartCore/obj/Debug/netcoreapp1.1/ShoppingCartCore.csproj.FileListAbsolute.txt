@@ -5,3 +5,10 @@ C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartCore\obj\Debu
 C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartCore\obj\Debug\netcoreapp1.1\ShoppingCartCore.AssemblyInfo.cs
 C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartCore\obj\Debug\netcoreapp1.1\ShoppingCartCore.dll
 C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartCore\obj\Debug\netcoreapp1.1\ShoppingCartCore.pdb
+C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartCore\bin\Debug\netcoreapp1.1\ShoppingCartCore.deps.json
+C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartCore\bin\Debug\netcoreapp1.1\ShoppingCartCore.dll
+C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartCore\bin\Debug\netcoreapp1.1\ShoppingCartCore.pdb
+C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartCore\obj\Debug\netcoreapp1.1\ShoppingCartCore.csprojResolveAssemblyReference.cache
+C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartCore\obj\Debug\netcoreapp1.1\ShoppingCartCore.AssemblyInfo.cs
+C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartCore\obj\Debug\netcoreapp1.1\ShoppingCartCore.dll
+C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartCore\obj\Debug\netcoreapp1.1\ShoppingCartCore.pdb
