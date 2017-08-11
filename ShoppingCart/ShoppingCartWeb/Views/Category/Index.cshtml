@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Categories";
+}
+<script src="~/js/Payment/Payment.js"></script>
+<h2>Categories</h2>
+<div ng-controller="paymentController as controller">
+    <span>{{controller.remaining()}} of {{controller.todos.length}} remaining</span>
+    [ <a href="" ng-click="controller.archive()">archive</a> ]
+    <ul class="unstyled">
+        <li ng-repeat="todo in controller.todos">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="todo.done">
+                <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </label>
+        </li>
+    </ul>
+    <form ng-submit="controller.addTodo()">
+        <input type="text" ng-model="controller.todoText" size="30"
+               placeholder="add new todo here">
+        <input class="btn-primary" type="submit" value="add">
+    </form>
+</div>
+
+
+

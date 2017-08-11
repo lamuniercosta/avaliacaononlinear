@@ -18,3 +18,6 @@ C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCa
 C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartApi\obj\Debug\netcoreapp1.1\ShoppingCartApi.pdb
 C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartApi\bin\Debug\netcoreapp1.1\ShoppingCartCore.dll
 C:\Users\lamunier.costa\Documents\Dev\avaliacaononlinear\ShoppingCart\ShoppingCartApi\bin\Debug\netcoreapp1.1\ShoppingCartCore.pdb
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartApi\bin\Debug\netcoreapp1.1\ShoppingCartCore.dll
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartApi\bin\Debug\netcoreapp1.1\ShoppingCartCore.pdb
+C:\Users\dx3\Documents\avaliacaononlinear\ShoppingCart\ShoppingCartApi\obj\Debug\netcoreapp1.1\ShoppingCartApi.csproj.CoreCompileInputs.cache

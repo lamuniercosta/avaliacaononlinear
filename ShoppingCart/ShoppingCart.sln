@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26608.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartApi", "ShoppingCartApi\ShoppingCartApi.csproj", "{C0A3859E-718A-484B-B986-C4AEBDCB7C17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCartApi", "ShoppingCartApi\ShoppingCartApi.csproj", "{C0A3859E-718A-484B-B986-C4AEBDCB7C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartCore", "ShoppingCartCore\ShoppingCartCore.csproj", "{43F3BA64-76BF-46F9-BB6C-B4872380AF7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCartCore", "ShoppingCartCore\ShoppingCartCore.csproj", "{43F3BA64-76BF-46F9-BB6C-B4872380AF7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartTest", "ShoppingCartTest\ShoppingCartTest.csproj", "{F7CC096E-B5FC-4FED-9667-BBA75F0FB145}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCartTest", "ShoppingCartTest\ShoppingCartTest.csproj", "{F7CC096E-B5FC-4FED-9667-BBA75F0FB145}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCartWeb", "ShoppingCartWeb\ShoppingCartWeb.csproj", "{4110E7FB-D50F-4A9F-AE3B-EE9771B10745}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F7CC096E-B5FC-4FED-9667-BBA75F0FB145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7CC096E-B5FC-4FED-9667-BBA75F0FB145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7CC096E-B5FC-4FED-9667-BBA75F0FB145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4110E7FB-D50F-4A9F-AE3B-EE9771B10745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4110E7FB-D50F-4A9F-AE3B-EE9771B10745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4110E7FB-D50F-4A9F-AE3B-EE9771B10745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4110E7FB-D50F-4A9F-AE3B-EE9771B10745}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
