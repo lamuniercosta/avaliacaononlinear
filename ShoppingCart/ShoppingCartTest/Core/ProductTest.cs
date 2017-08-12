@@ -20,8 +20,8 @@ namespace ShoppingCartTest.Core
         [TestInitialize]
         public void SetUp()
         {
-            var builder = new DbContextOptionsBuilder<BaseContext>().UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=AvaliacaoNonlinear;integrated security=True;");
-            //var builder = new DbContextOptionsBuilder<BaseContext>().UseSqlServer("Server=DESKTOP-NBVUSVN\\SQLEXPRESS;Database=AvaliacaoNonlinear;integrated security=True;");
+            //var builder = new DbContextOptionsBuilder<BaseContext>().UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=AvaliacaoNonlinear;integrated security=True;");
+            var builder = new DbContextOptionsBuilder<BaseContext>().UseSqlServer("Server=DESKTOP-NBVUSVN\\SQLEXPRESS;Database=AvaliacaoNonlinear;integrated security=True;");
             db = new BaseContext(builder.Options);
             this.repoProduct = new GenericRepository<Product>(db);
             this.repoCategory = new GenericRepository<Category>(db);

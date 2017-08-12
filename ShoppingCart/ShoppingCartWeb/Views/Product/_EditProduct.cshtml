@@ -1,0 +1,25 @@
+﻿<form role="form">
+    <div class="form-group">
+        <label for="inpCategory">Category* </label>
+        <p data-bind="css: { error: CategoryId.hasError }">
+            <select class="form-control" data-bind="options: categories, optionsText: 'name', optionsValue: 'id', value: CategoryId, valueUpdate: 'afterkeydown'"  required ></select>
+            <span data-bind='visible: CategoryId.hasError, text: CategoryId.validationMessage'> </span>
+        </p>
+    </div>
+    <div class="form-group">
+        <label for="inpName">Name* </label>
+        <p data-bind="css: { error: Name.hasError }">
+            <input id="inpName" type="text" class="form-control" data-bind="value: Name, valueUpdate: 'afterkeydown'"  required />
+            <span data-bind='visible: Name.hasError, text: Name.validationMessage'> </span>
+        </p>
+    </div>
+    <div class="form-group">
+        <label for="inpPrice">Price* </label>
+        <p data-bind="css: { error: Price.hasError }">
+            <input id="inpPrice" type="text" class="form-control" data-bind="value: Price, valueUpdate: 'afterkeydown'"  required />
+            <span data-bind='visible: Price.hasError, text: Price.validationMessage'> </span>
+        </p>
+    </div>
+    <input type="button" id="btnSaveProduct" class="btn btn-primary" value="Save Product" data-bind="click: saveProduct, disable: (CategoryId.hasError && Name.hasError && Price.hasError)" /> 
+</form>
+

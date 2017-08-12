@@ -2,25 +2,34 @@
 @{
     ViewData["Title"] = "Categories";
 }
-<script src="~/js/Payment/Payment.js"></script>
-<h2>Categories</h2>
-<div ng-controller="paymentController as controller">
-    <span>{{controller.remaining()}} of {{controller.todos.length}} remaining</span>
-    [ <a href="" ng-click="controller.archive()">archive</a> ]
-    <ul class="unstyled">
-        <li ng-repeat="todo in controller.todos">
-            <label class="checkbox">
-                <input type="checkbox" ng-model="todo.done">
-                <span class="done-{{todo.done}}">{{todo.text}}</span>
-            </label>
-        </li>
-    </ul>
-    <form ng-submit="controller.addTodo()">
-        <input type="text" ng-model="controller.todoText" size="30"
-               placeholder="add new todo here">
-        <input class="btn-primary" type="submit" value="add">
-    </form>
+<div class="page-header">
+    <h2 class="text-center">Categories</h2>
 </div>
+<script src="~/js/ViewModels/CategoryViewModel.js"></script>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h2 class="panel-title">Register new category</h2>
+            </div>
 
+            <div class="panel-body" data-bind="with: addCategoryViewModel">
+                @Html.Partial("_EditCategory")
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Registered Categories</h2>
+            </div>
+            <div class="panel-body" data-bind="with: categoryListViewModel">
+                @Html.Partial("_CategoriesList")
+            </div>
+        </div>
+    </div>
+
+</div> 
 
 

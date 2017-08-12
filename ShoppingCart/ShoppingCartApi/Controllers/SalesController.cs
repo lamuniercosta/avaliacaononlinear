@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Cors;
 using ShoppingCartCore.Infra;
 using ShoppingCartCore.Models;
 using ShoppingCartCore.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShoppingCartApi.Controllers
 {
@@ -29,7 +30,7 @@ namespace ShoppingCartApi.Controllers
         [HttpGet]
         public List<Sale> GetSales()
         {
-            return repo.GetAll();
+            return repo.GetAll().Include(s=>s.cart).Include(s=>s.payment).ToList();
         }
 
         // GET api/values/5
@@ -51,6 +52,7 @@ namespace ShoppingCartApi.Controllers
             Sale newItem = new Sale();
             try
             {
+                newItem.Id = item.Id;
                 newItem.CartId = item.CartId;
                 newItem.PaymentId = item.PaymentId;
                 newItem.DtSale = item.DtSale;

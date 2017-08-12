@@ -29,7 +29,7 @@ namespace ShoppingCartApi.Controllers
         [HttpGet]
         public List<Category> GetCategories()
         {
-            return repo.GetAll();
+            return repo.GetAll().ToList();
         }
 
         // GET api/values/5
@@ -61,9 +61,10 @@ namespace ShoppingCartApi.Controllers
         [HttpPost("[action]")]
         public IActionResult SaveCategory([FromBody]Category cat)
         {
+            Category newCat = new Category();
             try
             {
-                Category newCat = new Category();
+                newCat.Id = cat.Id;
                 newCat.Name = cat.Name;
                 if (cat.Id == 0)
                 {
@@ -79,7 +80,7 @@ namespace ShoppingCartApi.Controllers
                 return BadRequest(ex.InnerException.Message);
             }
 
-            return Ok("Ok");
+            return Ok(newCat);
         }
     }
 }

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Products";
+}
+<div class="page-header">
+    <h2 class="text-center">Products</h2>
+</div>
+<script src="~/js/ViewModels/ProductViewModel.js"></script>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h2 class="panel-title">Register new product</h2>
+            </div>
+
+            <div class="panel-body" data-bind="with: addProductViewModel">
+                @Html.Partial("_EditProduct")
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Registered Products</h2>
+            </div>
+            <div class="panel-body" data-bind="with: productListViewModel">
+                @Html.Partial("_ProductsList")
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+

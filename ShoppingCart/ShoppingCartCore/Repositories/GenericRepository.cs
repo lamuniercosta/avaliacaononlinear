@@ -32,9 +32,6 @@ namespace ShoppingCartCore.Repositories
         public virtual int Update(T model)
         {
             var entry = this.context.Entry(model);
-            if (entry.State == EntityState.Detached)
-                this.entities.Attach(model);
-
             this.ChangeObjectState(model, EntityState.Modified);
             return this.context.SaveChanges();
         }
@@ -42,16 +39,13 @@ namespace ShoppingCartCore.Repositories
         public virtual void Delete(T model)
         {
             var entry = this.context.Entry(model);
-            if (entry.State == EntityState.Detached)
-                this.entities.Attach(model);
-
             this.ChangeObjectState(model, EntityState.Deleted);
             this.context.SaveChanges();
         }
 
-        public virtual List<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
-            return this.entities.ToList();
+            return this.entities;
         }
 
         public virtual T GetById(object id)

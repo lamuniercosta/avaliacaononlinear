@@ -29,7 +29,7 @@ namespace ShoppingCartApi.Controllers
         [HttpGet]
         public List<Payment> GetPayments()
         {
-            return repo.GetAll();
+            return repo.GetAll().ToList();
         }
 
         // GET api/values/5
@@ -64,6 +64,7 @@ namespace ShoppingCartApi.Controllers
             Payment newPay = new Payment();
             try
             {
+                newPay.Id = pay.Id;
                 newPay.Name = pay.Name;                
                 if (pay.Id == 0)
                 {

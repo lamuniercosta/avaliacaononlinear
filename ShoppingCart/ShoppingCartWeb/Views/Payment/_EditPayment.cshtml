@@ -1,0 +1,11 @@
+﻿<form role="form">
+    <div class="form-group">
+        <label for="inpName">Name* </label>
+        <p data-bind="css: { error: Name.hasError }">
+            <input id="inpName" type="text" class="form-control" data-bind="value: Name, valueUpdate: 'afterkeydown'" />
+            <span data-bind='visible: Name.hasError, text: Name.validationMessage'> </span>
+        </p>
+    </div>
+</form>
+
+<input type="button" id="btnSavePayment" class="btn btn-primary" value="Save Payment" data-bind="click: savePayment, enable: Name" /> 

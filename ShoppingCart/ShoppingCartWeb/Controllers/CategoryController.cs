@@ -14,29 +14,5 @@ namespace ShoppingCartWeb.Controllers
         {
             return View();
         }
-
-        // GET: Category/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Category/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // GET: Category/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // GET: Category/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
     }
 }
