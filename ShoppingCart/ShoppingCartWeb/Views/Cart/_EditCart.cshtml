@@ -1,0 +1,11 @@
+﻿<form role="form">
+    <div class="form-group">
+        <label for="inpProduct">Product* </label>
+        <p data-bind="css: { error: selectedProduct.hasError }">
+        <select class="form-control" data-bind="options: products, optionsText: 'name', optionsValue: 'id', value: selectedProduct, valueUpdate: 'afterkeydown'" required></select>
+        <span data-bind='visible: selectedProduct.hasError, text: selectedProduct.validationMessage'> </span>
+    </p>
+    </div>
+    <input type="button" id="btnAddProduct" class="btn btn-primary" value="Add Product" data-bind="click: addToCart, enable: selectedProduct" /> 
+</form>
+

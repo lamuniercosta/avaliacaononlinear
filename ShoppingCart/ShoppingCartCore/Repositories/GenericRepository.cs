@@ -38,8 +38,7 @@ namespace ShoppingCartCore.Repositories
 
         public virtual void Delete(T model)
         {
-            var entry = this.context.Entry(model);
-            this.ChangeObjectState(model, EntityState.Deleted);
+            this.entities.Remove(model);
             this.context.SaveChanges();
         }
 

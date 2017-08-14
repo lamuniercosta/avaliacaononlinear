@@ -1,0 +1,11 @@
+﻿<form role="form">
+    <div class="form-group">
+        <label for="inpPayment">Payment Method* </label>
+        <p data-bind="css: { error: selectedPayment.hasError }">
+        <select class="form-control" data-bind="options: payments, optionsText: 'name', optionsValue: 'id', value: selectedPayment, valueUpdate: 'afterkeydown'" required></select>
+        <span data-bind='visible: selectedPayment.hasError, text: selectedPayment.validationMessage'> </span>
+    </p>
+    </div>    
+    <input type="button" id="btnCloseOrder" class="btn btn-primary" value="Close order" data-bind="click: closeOrder, enable: selectedPayment" /> 
+</form>
+

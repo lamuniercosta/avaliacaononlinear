@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "My cart";
+}
+<div class="page-header">
+    <h2 class="text-center">My cart</h2>
+</div>
+<script src="~/js/ViewModels/CartViewModel.js"></script>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h2 class="panel-title">Add product</h2>
+            </div>
+
+            <div class="panel-body">
+                @Html.Partial("_EditCart")
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Cart Items</h2>
+            </div>
+            <div class="panel-body">
+                @Html.Partial("_ItemsList")
+            </div>
+        </div>
+    </div>
+
+    <div class="span4">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td style="text-align:right">
+                        <strong><span data-bind="text:formatCurrency(total())"></span></strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- ko if: cart().length > 0-->
+    <input type="button" id="btnCloseOrder" class="btn btn-success" value="Close Order" data-bind="click: closeOrder" /> 
+    <!-- /ko -->​
+</div> 
+

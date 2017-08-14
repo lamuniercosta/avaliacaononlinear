@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Order Completed";
+}
+<div class="page-header">
+    <h2 class="text-center">Order Completed</h2>
+</div>
+<script src="~/js/ViewModels/SuccessViewModel.js"></script>
+<div class="row">
+    <div class="col-md">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Order details</h2>
+            </div>
+
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="inpId">Order number </label>
+                    <p data-bind="text: Id"></p>
+                </div>
+                <div class="form-group">
+                    <label for="inpPayment">Payment method </label>
+                    <p data-bind="text: Payment"></p>
+                </div>
+                <div class="form-group">
+                    <label for="inpDtSale">Date </label>
+                    <p data-bind="text: DtSale"></p>
+                </div>
+                <div class="form-group">
+                    <label for="inpTotal">Total </label>
+                    <p data-bind="text: Total"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

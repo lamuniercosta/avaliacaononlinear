@@ -18,11 +18,13 @@ namespace ShoppingCartApi.Controllers
     {
         private BaseContext db;
         private GenericRepository<Sale> repo;
+        private GenericRepository<Cart> repoC;
 
         public SalesController(BaseContext _db)
         {
             this.db = _db;
             this.repo = new GenericRepository<Sale>(db);
+            this.repoC = new GenericRepository<Cart>(db);
         }
 
         // GET: api/values
@@ -37,7 +39,20 @@ namespace ShoppingCartApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var retorno = repo.GetById(id);
+            var retorno = repo.GetAll().Include(s => s.payment).Where(s=>s.Id == id).FirstOrDefault();
+            if (retorno == null)
+            {
+                return NotFound();
+            }
+            return Ok(retorno);
+        }
+
+        // GET api/values/5
+        [HttpGet]
+        [Route("/api/Sale/GetCartById/{id}")]
+        public IActionResult GetCartById(int id)
+        {
+            var retorno = repoC.GetById(id);
             if (retorno == null)
             {
                 return NotFound();
@@ -49,29 +64,20 @@ namespace ShoppingCartApi.Controllers
         [HttpPost("[action]")]
         public IActionResult SaveSale([FromBody]Sale item)
         {
-            Sale newItem = new Sale();
             try
             {
-                newItem.Id = item.Id;
-                newItem.CartId = item.CartId;
-                newItem.PaymentId = item.PaymentId;
-                newItem.DtSale = item.DtSale;
-                newItem.Total = item.Total;
-                if (item.Id == 0)
-                {
-                    repo.Save(newItem);
-                }
-                else
-                {
-                    repo.Update(newItem);
-                }
+                item.DtSale = DateTime.Now;
+                repo.Save(item);
+                var cart = repoC.GetById(item.CartId);
+                cart.SaleId = item.Id;
+                repoC.Update(cart);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.InnerException.Message);
             }
 
-            return Ok(newItem);
+            return Ok(item);
         }
     }
 }

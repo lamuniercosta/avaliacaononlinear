@@ -18,11 +18,13 @@ namespace ShoppingCartApi.Controllers
     {
         private BaseContext db;
         private GenericRepository<Cart> repo;
+        private GenericRepository<CartItem> repoI;
 
         public CartsController(BaseContext _db)
         {
             this.db = _db;
             this.repo = new GenericRepository<Cart>(db);
+            this.repoI = new GenericRepository<CartItem>(db);
         }
 
         // GET: api/values
@@ -35,39 +37,48 @@ namespace ShoppingCartApi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public List<CartItem> GetById(int id)
         {
-            var retorno = repo.GetById(id);
-            if (retorno == null)
-            {
-                return NotFound();
-            }
-            return Ok(retorno);
+            return repoI.GetAll().Include(c => c.product).Where(c => c.CartId == id).ToList();
         }
 
         // POST api/values
         [HttpPost("[action]")]
         public IActionResult SaveCart([FromBody]Cart cart)
         {
-            Cart newCart = new Cart();
             try
             {
-                newCart.Id = cart.Id;
-                newCart.SaleId = cart.SaleId;
-                if (cart.Id == 0)
+                foreach (var item in cart.cartItems)
                 {
-                    repo.Save(newCart);
+                    item.product = null;
+                }
+                if (cart.Id == 0)
+                {                    
+                    repo.Save(cart);
                 }
                 else
                 {
-                    repo.Update(newCart);
+                    foreach (var item in cart.cartItems)
+                    {
+                        if (item.Id == 0)
+                        {
+                            item.CartId = cart.Id;
+                            repoI.Save(item);
+                        }
+                    }
+                    var removed = repoI.Where(c => c.CartId == cart.Id && !cart.cartItems.Select(i => i.Id).Contains(c.Id)).ToList();
+                    foreach (var item in removed)
+                    {
+                        repoI.Delete(item);
+                    }
+                    repo.Update(cart);
                 }
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.InnerException.Message);
+                return BadRequest(ex.GetBaseException().Message);
             }
-            return Ok(newCart);
+            return Ok(cart);
         }
     }
 }

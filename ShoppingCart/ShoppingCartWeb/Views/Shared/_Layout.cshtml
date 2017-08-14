@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ShoppingCartWeb</title>
+    <title>@ViewData["Title"] - My Shopping App</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -12,6 +12,7 @@
     </environment>
     <environment names="Development">
         <script src="~/lib/knockout/dist/knockout.js"></script>
+        <script src="~/lib/moment/moment.js"></script>
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
@@ -56,11 +57,10 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Category" asp-action="Index">Categories</a></li>
+                    <li><a asp-area="" asp-controller="Category" asp-action="Index">Product Categories</a></li>
                     <li><a asp-area="" asp-controller="Product" asp-action="Index">Products</a></li>
                     <li><a asp-area="" asp-controller="Payment" asp-action="Index">Payment Methods</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a href="/Cart/0">New Order</a></li>
                 </ul>
             </div>
         </div>
@@ -69,7 +69,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - ShoppingCartWeb</p>
+            <p>&copy; 2017 - Lamunier Costa</p>
         </footer>
     </div>
 
