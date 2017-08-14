@@ -76,7 +76,7 @@ namespace ShoppingCartTest.Core
         {
             var products = repoProduct.GetAll();
 
-            Assert.AreEqual(products.Count, 3);
+            Assert.AreEqual(products.ToList().Count, 3);
         }
     }
 }

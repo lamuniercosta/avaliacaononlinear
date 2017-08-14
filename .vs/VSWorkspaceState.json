@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ShoppingCart",
+    "\\ShoppingCart\\ShoppingCartTest",
     "\\ShoppingCart\\ShoppingCartWeb"
   ],
+  "SelectedNode": "\\ShoppingCart\\ShoppingCartTest\\Core",
   "PreviewInSolutionExplorer": false
 }
